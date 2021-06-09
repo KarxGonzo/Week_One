@@ -1,18 +1,17 @@
 class Store_item
   
+  attr_reader :name, :color, :price
+  attr_writer :name
+  
   def initialize (input_options)
+
     @name = input_options[:name]
     @color = input_options[:color]
     @price = input_options[:price]
   end
 
-  # def name
-  #   @name
-  # end
-
-  # def 
-  #   color =(input_color)
-  #   @color = input_color
+  # def price_taxes
+  #   price_taxes
   # end
 
   def print_info
