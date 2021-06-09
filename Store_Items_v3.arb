@@ -1,0 +1,33 @@
+class Store_item
+  
+  def initialize (input_options)
+    @name = input_options[:name]
+    @color = input_options[:color]
+    @price = input_options[:price]
+  end
+
+  # def name
+  #   @name
+  # end
+
+  # def 
+  #   color =(input_color)
+  #   @color = input_color
+  # end
+
+  def print_info
+    p  "#{@name} is the color #{@color} for the cost of #{@price}"
+  end
+
+end
+
+item_one = Store_item.new(
+  name: "Cheeries",
+  color: "golden dew",
+  price: 9.89
+)
+
+# item_two = Store_item.new("Fruit Loops","Rainbow", 10.00)
+
+
+item_one.print_info
