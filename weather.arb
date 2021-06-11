@@ -1,0 +1,32 @@
+#It is currently 75 degrees and sunny in Buffalo. 
+
+require 'http'
+
+while true
+
+  p "Please enter the name of a city or Q to quit the program."
+  user_city = gets.chomp.downcase
+
+  if user_city == 'q'
+    break 
+  end
+
+  p "Enter your preferred units. 
+    For Kelvin, add 'Standard'. 
+    For Farenheit, add 'imperial'. 
+    For 'Celsius', add 'Metric' "
+  units = gets.chomp.downcase
+
+  response = HTTP.get("http://api.openweathermap.org/data/2.5/weather?q=buffalo&appid=#{ENV['OPEN_WEATHER_API_KEY']}&units=imperial")
+
+  weather_data = response.parse(:json)
+
+  temperature = weather_data['main']['temp']
+  description = weather_data['weather'][0]['description']
+  city_name = weather_data['name']
+
+  system "clear"
+  p "welcome to the weather app!"
+  p "It is #{temperature} degrees and #{description} in #{city_name}"
+
+end

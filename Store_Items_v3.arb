@@ -2,7 +2,7 @@ class Store_item
   
   attr_reader :name, :color, :price
   attr_writer :name
-  
+
   def initialize (input_options)
 
     @name = input_options[:name]
@@ -10,9 +10,10 @@ class Store_item
     @price = input_options[:price]
   end
 
-  # def price_taxes
-  #   price_taxes
-  # end
+  def price_taxes
+    total = @price.to_i
+    price_taxes.round[2] = total * .08
+  end
 
   def print_info
     p  "#{@name} is the color #{@color} for the cost of #{@price}"
@@ -28,5 +29,5 @@ item_one = Store_item.new(
 
 # item_two = Store_item.new("Fruit Loops","Rainbow", 10.00)
 
-
+puts price_taxes
 item_one.print_info

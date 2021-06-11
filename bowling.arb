@@ -1,0 +1,53 @@
+=begin
+Spend the next 10 minutes decomposing the following problem (just decompose the problem, do not write any code to actually solve the problem for now):
+
+Write code to keep track of the score of a game of bowling. It should have two methods: `roll` which takes in the number of pins knocked down, and `score` which is called at the end and returns the total game score.
+
+=end
+
+=begin
+1. Create a placeholder for the name of each player. 
+2. Name the array based off the name of the player so that you are able to append based off the turn. 
+3. Collect the number of pins that every bowler has knocked down on the first turn.
+4. Calculate the amount of points that the player has made on their turn. 
+  Note that the rules have to follow the guidelines below: 
+      Scoring is based on the number of pins you knock down. However, if you bowl a
+      spare, you get to add the pins in your next ball to that frame. For strikes, you get
+      the next two balls. 
+5.Repeat this till every player has gone ten times. On the tenth frame; keep in mind that the player has some additional benefits for the following
+      If you bowl a strike in the tenth frame, you get
+      two more balls. If you throw a spare, you get one more ball.
+6. Have the players do three rounds of ten
+7. Announcing the winner: 
+
+      Traditional Singles Bowling – This is Singles bowling. The Athlete’s score is
+      based on a three game average. Add the total of all 3 games together and
+      then divide by three for the three game average. The maximum score is 300.
+
+=end
+
+class Bowling_game
+
+  #Number of Game
+  Game > 10
+  #Number of Rolls 
+  rolls = []
+  #Number of Pins Left 
+  Starting_Pins = 10
+  #Calculations for each player
+  #Scores
+  scores = []
+  #Player_Name 
+
+end
+
+#Ask for Player_Name 
+  #Add Player to an array that holds player count
+#Comparison of Players
+#Announce Winner
+
+puts "How many players in this bowling game?"
+players = gets.chomp 
+player_numbers = players.to_i 
+
+#creating the arrays depending on the variable 
